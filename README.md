@@ -13,3 +13,7 @@
         * iOS设置中UrlSchemes配置官网提供的ios项目urlscheme
 * 其它调用请参考[官方文档](https://docs.growingio.com/v3/developer-manual/sdkintegrated/otherframe-sdk/weex-sdk)
     * 因为都是基于weex的, 所有调用上是相同的, 仅需参考文档中调用方式(即仅参考文档中第二部分调用, 忽略第一部分集成)
+```Vue.js
+gio = uni.requireNativePlugin('GrowingIO-Tracker')
+gio.track({'eventId':'activate'});
+```
