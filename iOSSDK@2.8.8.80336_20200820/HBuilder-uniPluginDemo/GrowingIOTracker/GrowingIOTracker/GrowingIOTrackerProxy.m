@@ -12,9 +12,9 @@
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
     
-    NSNumber *isDebug = [plistDic objectForKey:@"growing_ios_debug"];
-    if (isDebug) {
-        [Growing setEnableLog:[isDebug boolValue]];
+    NSString *isDebug = [plistDic objectForKey:@"growing_ios_debug"];
+    if (isDebug.length) {
+        [Growing setEnableLog:[isDebug isEqualToString:@"YES"]];
     }
     
     NSString *zone = [plistDic objectForKey:@"growing_zone"];
